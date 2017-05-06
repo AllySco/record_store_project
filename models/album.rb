@@ -26,6 +26,11 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
     @id = album.first()['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM albums WHERE id=#{ @id };"
+    SqlRunner.run( sql )
+  end
+
 
 
 
