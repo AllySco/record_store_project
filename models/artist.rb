@@ -11,7 +11,12 @@ attr_reader :id, :name
   end
 
   def save
-    sql = "INSERT INTO artists (name) VALUES ('#{@name}') RETURNING id"
+    sql = "INSERT INTO artists (
+    name
+    ) VALUES (
+    '#{@name}'
+    )
+    RETURNING id"
     artist = SqlRunner.run(sql)
     @id = artist.first()['id'].to_i
   end
