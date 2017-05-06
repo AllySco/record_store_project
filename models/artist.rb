@@ -21,11 +21,11 @@ attr_reader :id, :name
     @id = artist.first()['id'].to_i
   end
 
-  def delete()
-    sql = "DELETE FROM artists WHERE id=#{ @id };"
-    SqlRunner.run( sql )
+  def Artist.all()
+    sql = "SELECT * FROM artists;"
+    artists = SqlRunner.run(sql)
+    return artists.map { |artist| Artist.new(artist) }
   end
-
 
 
 
