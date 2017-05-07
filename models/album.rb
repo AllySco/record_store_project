@@ -37,6 +37,14 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
     return albums.map { |album| Album.new(album) }
   end
 
+  def Album.find(id) 
+    sql = "SELECT * FROM albums WHERE id=#{id};"
+    album = SqlRunner.run( sql )
+    result = Album.new( album.first )
+    return result
+  end
+
+  
 
 
 
