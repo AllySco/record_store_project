@@ -1,5 +1,6 @@
 require('pg')
 require_relative('../db/sql_runner.rb')
+require_relative('artist.rb')
 
 class Album
 
@@ -28,6 +29,11 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
 
   def delete()
     sql = "DELETE FROM albums WHERE id=#{@id};"
+    SqlRunner.run(sql)
+  end
+
+  def Album.delete_all()
+    sql = "DELETE from albums;"
     SqlRunner.run(sql)
   end
 
@@ -65,10 +71,6 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
     return artist_object
   end
 
-  def Album.delete_all()
-    sql = "DELETE from albums;"
-    SqlRunner.run(sql)
-  end
 
 
 
