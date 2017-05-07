@@ -56,7 +56,19 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
     SqlRunner.run(sql)
   end
 
+  def artist
+    sql = "SELECT name FROM artists
+    WHERE id = #{@artist_id};"
+    results = SqlRunner.run(sql)
+    artist_hash = results.first()
+    artist_object = Artist.new(artist_hash)
+    return artist_object
+  end
 
+  def Album.delete_all()
+    sql = "DELETE from albums;"
+    SqlRunner.run(sql)
+  end
 
 
 

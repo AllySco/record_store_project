@@ -27,7 +27,10 @@ attr_reader :id, :name
     return artists.map { |artist| Artist.new(artist) }
   end
 
-
+  def Artist.delete_all()
+    sql = "DELETE from artists;"
+    SqlRunner.run(sql)
+  end
 
 
 
