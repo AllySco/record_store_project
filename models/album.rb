@@ -27,7 +27,7 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
   end
 
   def delete()
-    sql = "DELETE FROM albums WHERE id=#{ @id };"
+    sql = "DELETE FROM albums WHERE id=#{@id};"
     SqlRunner.run(sql)
   end
 
@@ -39,12 +39,22 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
 
   def Album.find(id) 
     sql = "SELECT * FROM albums WHERE id=#{id};"
-    album = SqlRunner.run( sql )
-    result = Album.new( album.first )
+    album = SqlRunner.run(sql)
+    result = Album.new(album.first)
     return result
   end
 
-  
+  def update()
+    sql = "UPDATE albums SET
+    title = '#{@title}',
+    genre = '#{@genre}',
+    quantity = #{@quantity},
+    artist_id = #{@artist_id},
+    buy_price = #{@buy_price},
+    sell_price = #{@sell_price}
+    WHERE id = '#{@id}';"
+    SqlRunner.run(sql)
+  end
 
 
 
