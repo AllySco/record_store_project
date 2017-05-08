@@ -1,0 +1,33 @@
+<h1>Crafty Barnardo Records</h1>
+<h2>Update Recrod Details</h2>
+<form action="/albums" method="POST">
+<ul>
+<li>
+<label for="title-field">Title:</label>
+<input id="title-field" name="title" type="text" value="<%= @albums.title %>">
+</li>
+<li>
+<label for="artist-field">Artist:</label>
+<input id="artist-field" type="text" name="artist" value="<%= @albums.artist.name %>">
+</li>
+<li>
+<label for="genre-field">Genre</label>
+<input type="text" id="genre-field" name="genre" value="<%= @albums.genre %>">
+</li>
+<li>
+<label for="buy_price-field">Buy Price:</label>
+<input id="buy_price-field" type="number" name="buy_price" value="<%= @albums.buy_price %>">
+</li>
+<li>
+<label for="sell_price-field">Sell Price:</label>
+<input id="sell_price-field" type="number" name="sell_price" value="<%= @albums.sell_price %>">
+</li>
+<li>
+<label for="quantity-field">Quantity:</label>
+<input id="quantity-field" type="number" name="quantity" value="<%= @albums.quantity %>">
+</li>
+<li>
+<input type="submit" value="Update">
+</li>
+</ul>
+</form>

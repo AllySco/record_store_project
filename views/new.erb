@@ -1,16 +1,20 @@
+<h1>Crafty Barnardo Records</h1>
+
+<h2>Add A New Album</h2>
+
 <form action="/albums" method="POST">
 <ul>
 <li>
 <label for="title-field">Title:</label>
-<input id="title-field" name="title" type="text"/>
+<input id="title-field" type="text" name="title">
 </li>
 <li>
 <label for="artist-field">Artist:</label>
 <input id="artist-field" type="text" name="artist">
 </li>
 <li>
-<label for="genre-field">Genre</label>
-<input type="text" id="genre-field" name="genre">
+<label for="genre-field">Genre:</label>
+<input id="genre-field" type="text" name="genre">
 </li>
 <li>
 <label for="buy_price-field">Buy Price:</label>
@@ -21,8 +25,10 @@
 <input id="sell_price-field" type="number" name="sell_price">
 </li>
 <li>
-<label for="quantity-field">Sell Price:</label>
+<label for="quantity-field">Quantity:</label>
 <input id="quantity-field" type="number" name="quantity">
 </li>
+<li>
+<input type="submit" value="Add Album">
 </ul>
 </form>

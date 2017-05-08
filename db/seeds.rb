@@ -2,9 +2,6 @@ require('pry-byebug')
 require_relative('../models/artist.rb')
 require_relative('../models/album.rb')
 
-Artist.delete_all
-Album.delete_all
-
 
 artist1 = Artist.new({
   'name' => 'Dead Kennedys'

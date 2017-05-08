@@ -19,8 +19,18 @@ get '/albums/:id' do
   erb(:show)
 end
 
-post "/albums" do
+post '/albums' do
   @albums = Album.new(params)
   @albums.save
   erb(:create)
+end
+
+get '/albums/id/edit'do
+  @albums = Album.find(params[:id])
+  erb(:edit)
+end
+
+post '/albums/:id' do
+  @albums = Album.new(params)
+  @albums.update()
 end
