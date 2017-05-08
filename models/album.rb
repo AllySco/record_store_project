@@ -15,7 +15,6 @@ attr_accessor :value
     @genre = params['genre']
     @buy_price = params['buy_price'].to_i if params['buy_price']
     @sell_price = params['sell_price'].to_i if params['sell_price']
-    @value = (@quantity * @buy_price)
   end
 
   def save
@@ -92,8 +91,9 @@ attr_accessor :value
     return total
   end
 
-
-
-
+  def value
+    value = @quantity * @buy_price
+    return value
+  end
 
 end
