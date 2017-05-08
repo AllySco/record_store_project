@@ -73,7 +73,18 @@ attr_accessor :value
     return artist_object
   end
 
-
+  def stock_level
+    case @quantity
+    when (0..5)
+      "Low"
+    when (6..10)
+      "Medium"
+    else
+      if @quantity > 10
+        "High"
+      end
+    end
+  end
 
 
 
