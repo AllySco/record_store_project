@@ -59,7 +59,7 @@ attr_accessor :value
     artist_id = #{@artist_id},
     buy_price = #{@buy_price},
     sell_price = #{@sell_price}
-    WHERE id = '#{@id}';"
+    WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
 

@@ -9,3 +9,11 @@
 <p>Stock Level: <%= @albums.stock_level %></p>
 <p>Buy Price: <%= @albums.buy_price %></p>
 <p>Sell Price: <%= @albums.sell_price %></p>
+
+<form action="/albums/<%= @albums.id %>/edit" method="get">
+<input type="submit" value="Edit"/>
+</form>
+
+<form action="/albums/<%= @albums.id %>/delete" method="post">
+<input type="submit" value="Delete"/>
+</form>

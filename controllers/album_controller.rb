@@ -4,7 +4,6 @@ require('pry-byebug')
 require_relative('models/artist.rb')
 require_relative('models/album.rb')
 
-
 get '/albums' do
   @albums = Album.all
   erb(:index)
@@ -34,3 +33,11 @@ post '/albums/:id' do
   @albums = Album.new(params)
   @albums.update()
 end
+
+post '/albums/:id/delete' do
+  @albums = Album.find(params[:id])
+  @albums.delete()
+  erb(:destroy)
+end
+
+

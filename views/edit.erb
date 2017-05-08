@@ -1,5 +1,7 @@
 <h1>Crafty Barnardo Records</h1>
-<h2>Update Recrod Details</h2>
+
+<h2>Update Record Details</h2>
+
 <form action="/albums" method="POST">
 <ul>
 <li>
@@ -8,7 +10,14 @@
 </li>
 <li>
 <label for="artist-field">Artist:</label>
-<input id="artist-field" type="text" name="artist" value="<%= @albums.artist.name %>">
+<select id="artist-select" name="artist_id">
+  <option value="1"<%= "selected" if @albums.artist_id == "1" %>
+>Dead Kennedys</option>
+  <option value="2" <%= "selected" if @albums.artist_id == "2" %>
+>System Of A Down</option>
+  <option value="3" <%= "selected" if @albums.artist_id == "3" %>
+>Wu-Tang Clan</option>
+</select>
 </li>
 <li>
 <label for="genre-field">Genre</label>
