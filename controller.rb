@@ -10,7 +10,7 @@ get '/albums' do
   erb(:index)
 end
 
-get "/albums/:id" do 
+get '/albums/:id' do 
   @albums = Album.find(params[:id])
   erb(:show)
 end
