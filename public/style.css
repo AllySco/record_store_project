@@ -1,0 +1,28 @@
+h1 {
+  font-family: 'Sonsie One', cursive;
+  font-weight: bolder;
+  font-size: 6.5em;
+  color: steelblue;
+  text-shadow: 3px 3px firebrick;
+
+}
+
+h2 {
+  font-family: 'Vampiro One', cursive;
+  font-weight: bold;
+  font-size: 3em;
+  color: steelblue;
+  text-shadow: 2px 2px firebrick;
+}
+
+body {
+
+}
+
+p {
+  font-family: 'Vampiro One', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px steelblue;
+  color: firebrick;
+
+}
