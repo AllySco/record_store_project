@@ -33,6 +33,18 @@ attr_reader :id, :name
     SqlRunner.run(sql)
   end
 
+  def delete()
+    sql = "DELETE FROM artists WHERE id=#{@id};"
+    SqlRunner.run(sql)
+  end
+
+  def update()
+    sql = "UPDATE artists SET
+    name = '#{@name}'
+    WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def Artist.find(id) 
     sql = "SELECT * FROM artists WHERE id=#{id};"
     artist = SqlRunner.run(sql)
@@ -49,6 +61,9 @@ attr_reader :id, :name
 
   end
 
-
+  def total_artists
+    total = Artist.all.count
+    return total
+  end
 
 end

@@ -85,15 +85,23 @@ attr_accessor :value
     end
   end
 
+  def value
+    value = @quantity * @buy_price
+    return value
+  end
+
   def Album.total_stock_value
     total = 0
     Album.all.each() { |album| total += album.value  }
     return total
   end
 
-  def value
-    value = @quantity * @buy_price
-    return value
+  def Album.total_albums
+    total = 0
+    Album.all.each { |album| total += album.quantity }
+    return total
   end
+
+
 
 end

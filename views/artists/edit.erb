@@ -1,0 +1,15 @@
+<h1>Crafty Barnardo Records</h1>
+
+<h2>Update Record Details</h2>
+
+<form action="/artists/<%= @artists.id%>" method="POST">
+<ul>
+<li>
+<label for="name-field">Artist Name:</label>
+<input id="name-field" name="name" type="text" value="<%= @artists.name %>">
+</li>
+<li>
+<input type="submit" value="Update">
+</li>
+</ul>
+</form>

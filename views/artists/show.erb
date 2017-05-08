@@ -1,0 +1,14 @@
+<h1>Crafty Barnardo Records</h1>
+
+<h2>Artist Details</h2>
+
+<p>Name: <%= @artists.name %></p>
+
+
+<form action="/artists/<%= @artists.id %>/edit" method="get">
+<input type="submit" value="Edit"/>
+</form>
+
+<form action="/artists/<%= @artists.id %>/delete" method="post">
+<input type="submit" value="Delete"/>
+</form>

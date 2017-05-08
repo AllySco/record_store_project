@@ -1,0 +1,14 @@
+<h1>Crafty Barnardo Records</h1>
+<h2>All Artists</h2>
+<hr/>
+
+<% @artists.each do |artist| %>
+
+<p>Name: <%= artist.name %></p>
+
+
+<p><a href="/artists/<%= artist.id %>">Show Artist Details</a></p>
+
+<hr/>
+
+<% end %>
