@@ -1,18 +1,3 @@
 <h1>Crafty Barnardo Records</h1>
-<hr/>
-
-<% @albums.each do |album| %>
-
-<p>Title: <%= album.title %></p>
-<p>Artist: <%= album.artist.name %></p>
-<p>Genre: <%= album.genre %></p>
-<p>Quantity: <%= album.quantity %></p>
-<p>Stock Level: <%= album.stock_level %></p>
-<p>Buy Price: <%= album.buy_price %></p>
-<p>Sell Price: <%= album.sell_price %></p>
 
 <p><a href="/albums/<%= album.id %>">Show Album Details</a></p>
-
-<hr/>
-
-<% end %>
