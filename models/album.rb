@@ -4,7 +4,7 @@ require_relative('artist.rb')
 
 class Album
 
-attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
+attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price, :value
 
   def initialize(params)
     @id = params['id'].to_i if params['id']
@@ -14,6 +14,7 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
     @genre = params['genre']
     @buy_price = params['buy_price'].to_i if params['buy_price']
     @sell_price = params['sell_price'].to_i if params['sell_price']
+    @value = @quantity * @buy_price
   end
 
   def save
@@ -70,7 +71,6 @@ attr_reader :id, :title, :artist_id, :quantity, :genre, :buy_price, :sell_price
     artist_object = Artist.new(artist_hash)
     return artist_object
   end
-
 
 
 
