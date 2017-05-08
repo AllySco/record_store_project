@@ -2,27 +2,47 @@ h1 {
   font-family: 'Sonsie One', cursive;
   font-weight: bolder;
   font-size: 6.5em;
-  color: steelblue;
-  text-shadow: 3px 3px firebrick;
-
+  color: yellowgreen;
+  text-shadow: 3px 3px darkslategrey;
+  text-align: right;
 }
 
 h2 {
   font-family: 'Vampiro One', cursive;
   font-weight: bold;
   font-size: 3em;
-  color: steelblue;
-  text-shadow: 2px 2px firebrick;
+  color: yellowgreen;
+  text-shadow: 2px 2px darkslategrey;
 }
 
-body {
-
+.grad {
+  background: red;
+  background: radial-gradient(circle, steelblue, black, firebrick); /* Standard syntax */
 }
 
 p {
   font-family: 'Vampiro One', cursive;
   font-weight: bold;
-  text-shadow: 1px 1px steelblue;
-  color: firebrick;
+  text-shadow: 1px 1px black;
+  color: yellowgreen;
+  font-size:1.2em;
+}
 
+a {
+  font-family: 'Vampiro One', cursive;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 1px 1px black;
+  color: royalblue;
+  font-size: 1.15em;
+}
+
+nav {
+  font-family: 'Vampiro One', cursive;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 1px 1px black;
+  color: royalblue;
+  font-size: 1.15em;
+  
 }
