@@ -14,18 +14,18 @@ get '/artists/new' do
 end
 
 get '/artists/:id' do 
-  @albums = Album.find(params[:id])
+  @artists = Artist.find(params[:id])
   erb(:"artists/show")
 end
 
 post '/artists' do
-  @artists = Album.new(params)
+  @artists = Artist.new(params)
   @artists.save
   erb(:"artists/create")
 end
 
 get '/artists/id/edit'do
-  @albums = Artist.find(params[:id])
+  @artists = Artist.find(params[:id])
   erb(:"artists/edit")
 end
 
