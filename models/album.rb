@@ -86,6 +86,12 @@ attr_accessor :value
     end
   end
 
+  def Album.total_stock_value
+    total = 0
+    Album.all.each() { |album| total += album.value  }
+    return total
+  end
+
 
 
 
