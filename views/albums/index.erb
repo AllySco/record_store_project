@@ -1,16 +1,23 @@
+<img class="vinyl" src="/images/ourvinylweighs.jpg" alt = "Our vinyl weighs a ton, icon">
 <h1>Crafty Barnardo Records</h1>
 <h2>All Albums</h2>
 <hr/>
 <body>
 <% @albums.each do |album| %>
 
-<p>Title: <%= album.title %></p>
-<p>Artist: <%= album.artist.name %></p>
-<p>Genre: <%= album.genre %></p>
-<p>Quantity: <%= album.quantity %></p>
-<p>Stock Level: <%= album.stock_level %></p>
-<p>Buy Price: <%= album.buy_price %></p>
-<p>Sell Price: <%= album.sell_price %></p>
+<div class="grid">
+  <div class="grid-row grid-row-md">
+    <div class="cell">Title: <%= album.title %></div>
+    <div class="cell">Artist: <%= album.artist.name %></div>
+    <div class="cell">Genre: <%= album.genre %></div>
+  </div>
+  <div class="grid-row grid-row-lg">
+    <div class="cell">Buy Price: <%= album.buy_price %></div>
+    <div class="cell">Sell Price: <%= album.sell_price %></div>
+    <div class="cell">Quantity: <%= album.quantity %></div>
+    <div class="cell">Stock Level: <%= album.stock_level %></div>
+  </div>
+</div>
 
 <p><a href="/albums/<%= album.id %>">Show Album Details</a></p>
 
@@ -18,7 +25,8 @@
 
 <% end %>
 </body>
-<footer class="footer">
+<footer>
 <p class="foottext">Inventory Control System</p>
 <p class="foottext">CBR 2017</p>
 </footer>
+

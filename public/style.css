@@ -1,12 +1,14 @@
 h1 {
+  display: inline;
+  justify-content: right;
   font-family: 'Sonsie One', cursive;
   font-weight: bolder;
   font-size: 7em;
   color: firebrick;
   text-shadow: 3px 3px darkslategrey;
   text-align: right;
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
 }
 
 h2 {
@@ -27,8 +29,6 @@ h3 {
 
 body {
   background-color: #cce7de;
-  height: 100%;
-  width: 100%;
 }
 
 p {
@@ -48,14 +48,36 @@ a {
   font-size: 1.15em;
 }
 
+footer {
+  position: fixed;
+  height: 7em;
+  overflow-y: auto;
+    width: 100%;
+    position: fixed;
+    top: 864px;
+    left: 0;
+    z-index: 1000;
+}
+
+.foottext {
+  font-weight: bold;
+  font-size: 1.4em;
+  justify-content: inline-block;
+  text-align: right;
+  margin: 0.3em;
+  padding-right: 0.1em;
+}
+
 nav {
   font-family: 'Sonsie One', cursive;
   display: flex
   justify-content: space-between;
   text-align: center;
+  padding: 2px;
   text-shadow: 1px 1px black;
   color: dodgerblue;
   font-size: 1.2em;
+  position: relative;
 }
 
 ul {
@@ -67,12 +89,19 @@ ul {
   font-size:1.2em;
 }
 
-.main {
+.vinyl {
+  padding: 1em;
+  border-radius: 60%;
+  display: inline;
+  width: 20%;
+}
+
+.mainimg {
   padding: 3em;
   border-radius: 30%;
   display: block;
   margin: auto;
-  width: 40%;
+  width: 50%;
 }
 
 .mainbody {
@@ -85,11 +114,13 @@ ul {
   font-family: 'Sonsie One', cursive;
   font-weight: bolder;
   font-size: 7em;
-  color: lightsteelblue;
-  text-shadow: 3px 3px firebrick;
+  color: firebrick;
+  text-shadow: 3px 3px darkslategrey;
   text-align: right;
   margin: 10px;
   padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
@@ -143,22 +174,43 @@ hr {
   border-color: dodgerblue;
 }
 
-.footer {
-  position: fixed;
-  height: 10em;
-  width: 100%;
-  background: linear-gradient(to top, darkslategrey, slategrey);
-  opacity: 0.7;
+
+.grid {
+  border: solid 1px mediumaquamarine;
 }
 
-.foottext {
-  font-weight: bold;
-  font-size: 1.5em;
-  justify-content: inline-block;
-  text-align: left;
-  margin: 0.5em;
-  padding: 0.5em;
+.grid-row {
+  display: flex;
+  flex-direction: column;
 }
+
+.cell {
+  flex: 1;
+  padding: 10px;
+  border: solid 1px mediumaquamarine;
+}
+
+@media all and (min-width: 480px) {
+
+  .grid-row-sm {
+    flex-direction: row;
+  }
+}
+
+@media all and (min-width: 720px) {
+
+  .grid-row-md {
+    flex-direction: row;
+  }
+}
+
+@media all and (min-width: 960px) {
+
+  .grid-row-lg {
+    flex-direction: row;
+  }
+}
+
 
 
 
