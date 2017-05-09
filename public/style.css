@@ -50,7 +50,7 @@ a {
 
 footer {
   position: fixed;
-  height: 7em;
+  height: 15em;
   overflow-y: auto;
     width: 100%;
     position: fixed;
@@ -66,6 +66,7 @@ footer {
   text-align: right;
   margin: 0.3em;
   padding-right: 0.1em;
+  color: dodgerblue;
 }
 
 nav {
@@ -174,32 +175,33 @@ hr {
   border-color: dodgerblue;
 }
 
-
-.grid {
-  border: solid 1px mediumaquamarine;
+div {
+  font-family: 'Sonsie One', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+  color: firebrick;
+  font-size:1.1em;
 }
 
+
 .grid-row {
+  width: 80%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
 .cell {
   flex: 1;
   padding: 10px;
-  border: solid 1px mediumaquamarine;
 }
 
-@media all and (min-width: 480px) {
-
-  .grid-row-sm {
-    flex-direction: row;
-  }
-}
 
 @media all and (min-width: 720px) {
 
   .grid-row-md {
+    width: 80%;
+    justify-content: center;
     flex-direction: row;
   }
 }
@@ -207,18 +209,8 @@ hr {
 @media all and (min-width: 960px) {
 
   .grid-row-lg {
+    width: 80%;
+    justify-content: center;
     flex-direction: row;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
