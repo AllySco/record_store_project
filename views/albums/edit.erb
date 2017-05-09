@@ -4,7 +4,6 @@
 <h2>Update Record Details</h2>
 <body>
   <form action="/albums/<%= @albums.id%>" method="POST">
-<div class="grid">
   <div class="grid-row grid-row-md">
 
     <div class="cell"><label for="title-field">Title: </label>
@@ -20,9 +19,9 @@
 <input type="text" id="genre-field" name="genre" value="<%= @albums.genre %>"></div>
   </div>
   <div class="grid-row grid-row-lg">
-    <div class="cell"><label for="buy_price-field">Buy Price: </label>
+    <div class="cell"><label for="buy_price-field">Buy Price:</label>
 <input id="buy_price-field" type="number" name="buy_price" value="<%= @albums.buy_price %>"></div>
-    <div class="cell"><label for="sell_price-field">Sell Price: </label>
+    <div class="cell"><label for="sell_price-field">Sell Price:</label>
 <input id="sell_price-field" type="number" name="sell_price" value="<%= @albums.sell_price %>"></div>
     <div class="cell"><label for="quantity-field">Quantity: </label>
 <input id="quantity-field" type="number" name="quantity" value="<%= @albums.quantity %>"></div>

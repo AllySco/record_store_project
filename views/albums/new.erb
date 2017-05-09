@@ -4,39 +4,32 @@
 <h2>Add A New Album</h2>
 <body>
 <form action="/albums" method="POST">
-<ul>
-<li>
-<label for="title-field">Title:</label>
-<input id="title-field" type="text" name="title">
-</li>
-<li>
-<label for="artist-field">Artist:</label>
+  <div class="grid-row grid-row-md">
+    <div class="cell"><label for="title-field">Title:</label>
+<input id="title-field" type="text" name="title"></div>
+    <div class="cell"><label for="artist-field">Artist: </label>
 <select id="artist-select" name="artist_id">
   <% for artist in @artists %>
       <option value="<%= artist.id %>"><%= artist.name %></option>
       <% end %>
-</select>
-</li>
-<li>
-<label for="genre-field">Genre:</label>
-<input id="genre-field" type="text" name="genre">
-</li>
-<li>
-<label for="buy_price-field">Buy Price:</label>
-<input id="buy_price-field" type="number" name="buy_price">
-</li>
-<li>
-<label for="sell_price-field">Sell Price:</label>
-<input id="sell_price-field" type="number" name="sell_price">
-</li>
-<li>
-<label for="quantity-field">Quantity:</label>
-<input id="quantity-field" type="number" name="quantity">
-</li>
-<li>
-<input class="button" type="submit" value="Add Album">
-</li>
-</ul>
+</select></div>
+    <div class="cell"><label for="genre-field">Genre: </label>
+<input id="genre-field" type="text" name="genre"></div>
+  </div>
+  <div class="grid-row grid-row-lg">
+    <div class="cell"><label for="buy_price-field">Buy Price: </label>
+<input id="buy_price-field" type="number" name="buy_price"></div>
+    <div class="cell"><label for="sell_price-field">Sell Price: </label>
+<input id="sell_price-field" type="number" name="sell_price"></div>
+    <div class="cell"><label for="quantity-field">Quantity: </label>
+<input id="quantity-field" type="number" name="quantity"></div>
+    <div class="cell"><input class="button" type="submit" value="Add Album">
+</div>
+  </div>
+</div>
+
+
+
 </form>
 </body>
 <footer>

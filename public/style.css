@@ -149,23 +149,28 @@ ul {
 }
 
 .button {
-  border:1px solid black;
+  border: 1px solid black;
   background: linear-gradient(to bottom right, silver , darkslategrey);
   border-radius: 15%;
-  padding: 3px 5px;
-  margin: 1px;
   color: firebrick;
-  font-size: 1em;
+  margin: 5px;
+  font-size: 1em
   font-family: 'Sonsie One', cursive;
   text-shadow: 1px 1px black;
   text-align: center;
+}
+
+.showbut {
+  display: inline-block;
 }
 
 input {
   border:1px solid black;
   background: linear-gradient(to bottom right, silver , darkslategrey);
   border-radius: 5%;
+  width: 280;
   color: firebrick;
+  margin: 5px;
   font-size: 1em;
   font-family: 'Sonsie One', cursive;
   text-shadow: 1px 1px black;
@@ -176,6 +181,9 @@ select {
   background: linear-gradient(to bottom right, silver , darkslategrey);
   border-radius: 5%;
   color: firebrick;
+  width: 180px;
+  margin-left: 5px;
+  margin-right: 5;
   font-size: 1em;
   font-family: 'Sonsie One', cursive;
   text-shadow: 1px 1px black;
@@ -186,6 +194,7 @@ option {
   background: linear-gradient(to bottom right, silver , darkslategrey);
   border-radius: 5%;
   color: firebrick;
+  padding: 5px;
   font-family: 'Sonsie One', cursive;
   text-shadow: 1px 1px black;
 }
@@ -195,10 +204,6 @@ hr {
 }
 
 
-.grid {
-  border: solid 1px mediumaquamarine;
-}
-
 .grid-row {
   display: flex;
   flex-direction: row;
@@ -206,11 +211,9 @@ hr {
 
 .cell {
   flex: 1;
-  padding: 10px;
-  max-width: 250px;
-  border: solid 1px mediumaquamarine;
+  max-width: 320px;
+  margin-right: 15px;
 }
-
 
 
 @media all and (min-width: 800px) {
@@ -225,4 +228,13 @@ hr {
   .grid-row-lg {
     flex-direction: row;
   }
+}
+
+div {
+  font-family: 'Sonsie One', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+  color: firebrick;
+  font-size: 1.1em;
+  display: flex;
 }
