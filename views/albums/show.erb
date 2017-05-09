@@ -11,9 +11,9 @@
 <p>Sell Price: <%= @albums.sell_price %></p>
 
 <form action="/albums/<%= @albums.id %>/edit" method="get">
-<input type="submit" value="Edit"/>
+<input class="button" type="submit" value="Edit"/>
 </form>
 
 <form action="/albums/<%= @albums.id %>/delete" method="post">
-<input type="submit" value="Delete"/>
+<input class="button" type="submit" value="Delete"/>
 </form>

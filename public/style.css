@@ -1,30 +1,31 @@
 h1 {
   font-family: 'Sonsie One', cursive;
   font-weight: bolder;
-  font-size: 6.5em;
-  color: yellowgreen;
+  font-size: 7em;
+  color: firebrick;
   text-shadow: 3px 3px darkslategrey;
   text-align: right;
+  margin: 10px;
+  padding: 10px;
 }
 
 h2 {
   font-family: 'Vampiro One', cursive;
   font-weight: bold;
   font-size: 3em;
-  color: yellowgreen;
+  color: firebrick;
   text-shadow: 2px 2px darkslategrey;
 }
 
-.grad {
-  background: red;
-  background: radial-gradient(circle, steelblue, black, firebrick); /* Standard syntax */
+body {
+  background-color: lightsteelblue;
 }
 
 p {
   font-family: 'Vampiro One', cursive;
   font-weight: bold;
   text-shadow: 1px 1px black;
-  color: yellowgreen;
+  color: firebrick;
   font-size:1.2em;
 }
 
@@ -39,10 +40,78 @@ a {
 
 nav {
   font-family: 'Vampiro One', cursive;
-  display: inline-block;
+  display: flex
+  justify-content: space-between;
   text-align: center;
   text-shadow: 1px 1px black;
   color: royalblue;
-  font-size: 1.15em;
-  
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: none;
+  font-family: 'Vampiro One', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+  color: firebrick;
+  font-size:1.2em;
+}
+
+.vinyl {
+  padding: 3em;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+
+.button {
+    border:1px solid black;
+    background: linear-gradient(to bottom right, silver , darkslategrey);
+    border-radius: 15%;
+    padding: 6px 10px;
+    margin: 2px;
+    color: firebrick;
+    font-size: 1.1em;
+    font-family: 'Vampiro One', cursive;
+    text-shadow: 1px 1px black;
+}
+
+input {
+  border:1px solid black;
+  background: linear-gradient(to bottom right, silver , darkslategrey);
+  border-radius: 5%;
+  padding: 6px 10px;
+  margin: 2px;
+  color: firebrick;
+  font-size: 1em;
+  font-family: 'Vampiro One', cursive;
+  text-shadow: 1px 1px black;
+}
+
+select {
+  border:1px solid black;
+  background: linear-gradient(to bottom right, silver , darkslategrey);
+  border-radius: 5%;
+  padding: 6px 10px;
+  margin: 2px;
+  color: firebrick;
+  font-size: 1em;
+  font-family: 'Vampiro One', cursive;
+  text-shadow: 1px 1px black;
+}
+
+option {
+  border:1px solid black;
+  background: linear-gradient(to bottom right, silver , darkslategrey);
+  border-radius: 5%;
+  padding: 6px 10px;
+  margin: 2px;
+  color: firebrick;
+  font-family: 'Vampiro One', cursive;
+  text-shadow: 1px 1px black;
+}
+
+hr {
+  border-color: royalblue;
 }

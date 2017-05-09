@@ -11,9 +11,9 @@
 <li>
 <label for="artist-field">Artist:</label>
 <select id="artist-select" name="artist_id">
-  <option value="1">Dead Kennedys</option>
-  <option value="2">System Of A Down</option>
-  <option value="3">Wu-Tang Clan</option>
+  <% for artist in @artists %>
+      <option value="<%= artist.id %>"><%= artist.name %></option>
+      <% end %>
 </select>
 </li>
 <li>
@@ -33,7 +33,7 @@
 <input id="quantity-field" type="number" name="quantity">
 </li>
 <li>
-<input type="submit" value="Add Album">
+<input class="button" type="submit" value="Add Album">
 </li>
 </ul>
 </form>
