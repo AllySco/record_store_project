@@ -1,14 +1,21 @@
+<img class="vinyl" src="/images/ourvinylweighs.jpg" alt = "Our vinyl weighs a ton">
 <h1>Crafty Barnardo Records</h1>
 
 <h2>Album Details</h2>
 <body>
-<p>Title: <%= @albums.title %></p>
-<p>Artist: <%= @albums.artist.name %></p>
-<p>Genre: <%= @albums.genre %></p>
-<p>Quantity: <%= @albums.quantity %></p>
-<p>Stock Level: <%= @albums.stock_level %></p>
-<p>Buy Price: <%= @albums.buy_price %></p>
-<p>Sell Price: <%= @albums.sell_price %></p>
+<div class="grid">
+  <div class="grid-row grid-row-md">
+    <div class="cell">Title: <%= @albums.title %></div>
+    <div class="cell">Artist: <%= @albums.artist.name %></div>
+    <div class="cell">Genre: <%= @albums.genre %></div>
+  </div>
+  <div class="grid-row grid-row-lg">
+    <div class="cell">Buy Price: <%= @albums.buy_price %></div>
+    <div class="cell">Sell Price: <%= @albums.sell_price %></div>
+    <div class="cell">Quantity: <%= @albums.quantity %></div>
+    <div class="cell">Stock Level: <%= @albums.stock_level %></div>
+  </div>
+</div>
 
 <form action="/albums/<%= @albums.id %>/edit" method="get">
 <input class="button" type="submit" value="Edit"/>

@@ -61,7 +61,7 @@ attr_reader :id, :name
 
   end
 
-  def total_artists
+  def Artist.total_artists
     total = Artist.all.count
     return total
   end
