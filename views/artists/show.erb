@@ -1,9 +1,12 @@
 <h1>Crafty Barnardo Records</h1>
 
 <h2>Artist Details</h2>
-
+<body>
 <p>Name: <%= @artists.name %></p>
-<p>Albums: <%= @artists.albums %></p>
+<h3>Albums:</h3>
+<% @artists.albums.each do |album| %>
+<p><%= album.title %></p>
+<% end %> 
 
 
 <form action="/artists/<%= @artists.id %>/edit" method="get">
@@ -13,3 +16,8 @@
 <form action="/artists/<%= @artists.id %>/delete" method="post">
 <input type="submit" value="Delete"/>
 </form>
+</body>
+<footer class="footer">
+<p class="foottext">Inventory Control System</p>
+<p class="foottext">CBR 2017</p>
+</footer>
