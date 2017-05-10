@@ -3,6 +3,7 @@
 
 <h2>Album Details</h2>
 <body>
+
 <div class="grid">
   <div class="grid-row grid-row-md">
     <div class="cell">Title: <%= @albums.title %></div>
@@ -24,7 +25,9 @@
 <form action="/albums/<%= @albums.id %>/delete" method="post">
 <input class="button showbut" type="submit" value="Delete"/>
 </form>
+
 </body>
+
 <footer>
 <p class="foottext">Inventory Control System</p>
 </footer>
