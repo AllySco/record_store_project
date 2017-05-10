@@ -11,7 +11,7 @@
     <div class="cell"><label for="artist-field">Artist: </label>
     <select id="artist-select" name="artist_id">
       <% for artist in @artists %>
-          <option value="<%= artist.id %>"><%= artist.name %></option>
+          <option value="<%= artist.id %>"<%= "selected" if @albums.artist_id == artist.id %>><%= artist.name %></option>
           <% end %>
     </select>
     </div>
