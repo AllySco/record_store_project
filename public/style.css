@@ -53,13 +53,39 @@ p {
   font-size:1.5em;
 }
 
+nav {
+  font-family: 'Sonsie One', cursive;
+  display: block;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2px;
+  margin: auto;
+  text-shadow: 1px 1px black;
+  color: dodgerblue;
+  position: relative;
+}
+
+nav a {
+  font-family: 'Sonsie One', cursive;
+  display: inline-block;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2px;
+  margin: auto;
+  text-shadow: 1.5px 1.5px black;
+  color: dodgerblue;
+  font-size: 1.5em;
+  position: relative;
+  font-weight: bold;
+}
+
 a {
   font-family: 'Sonsie One', cursive;
   display: inline-block;
   text-align: center;
   text-shadow: 1px 1px black;
-  color: royalblue;
-  font-size: 1em;
+  color: dodgerblue;
+  font-size: 0.9em;
 }
 
 footer {
@@ -87,18 +113,6 @@ footer {
   color: dodgerblue;
 }
 
-nav {
-  font-family: 'Sonsie One', cursive;
-  display: block;
-  justify-content: space-between;
-  text-align: center;
-  padding: 2px;
-  margin: auto;
-  text-shadow: 1px 1px black;
-  color: dodgerblue;
-  font-size: 1.5em;
-  position: relative;
-}
 
 ul {
   list-style: none;
@@ -239,17 +253,23 @@ hr {
 }
 
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
 
   .grid-row-md {
     flex-direction: row;
   }
 }
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 860px) {
 
   .grid-row-lg {
+
     flex-direction: row;
+  }
+}
+@media all and (max-width: 800px) {
+  .ipad {
+    flex-direction: column;
   }
 }
 
