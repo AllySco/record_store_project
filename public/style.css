@@ -42,7 +42,7 @@ h3 {
 
 body {
   background-color: #cce7de;
-  margin-bottom: 200px;
+  margin-bottom: 480px;
 }
 
 p {
@@ -91,7 +91,7 @@ a {
 footer {
   border-top: 1px solid aliceblue;
   position: fixed;
-  height: 8em;
+  height: 10em;
   overflow-y: auto;
   width: 100%;
   position: fixed;
